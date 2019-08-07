@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,8 +20,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
 //        Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
+        val randonInt = Random().nextInt(6) + 1
+
+
+
 
         val result_text: TextView = findViewById(R.id.result_text)
-        result_text.text = "Dice Rolled"
+        result_text.text = randonInt.toString()
     }
 }
