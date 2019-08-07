@@ -3,6 +3,7 @@ package buu.informatics.s59160937.diceroller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -13,10 +14,13 @@ class MainActivity : AppCompatActivity() {
         val roll_button: Button = findViewById(R.id.roll_button)
         roll_button.setOnClickListener{ rollDice() }
 
+
     }
 
     private fun rollDice() {
-        Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
 
+        val result_text: TextView = findViewById(R.id.result_text)
+        result_text.text = "Dice Rolled"
     }
 }
